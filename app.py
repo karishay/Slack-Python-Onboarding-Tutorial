@@ -21,7 +21,7 @@ def _event_handler(event_type, slack_event):
     Parameters
     ----------
     event_type : str
-        type of event recieved from Slack
+        type of event received from Slack
     slack_event : dict
         JSON response from a Slack reaction event
 
