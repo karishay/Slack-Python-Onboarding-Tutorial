@@ -32,6 +32,19 @@ After you've enabled events, you'll need to add a **redirect URL** in your app's
 
 Now your app is ready to be installed on a Slack team. Go ahead and hit that `https://<yourtempsubdomain>.ngrok.io/` URL to install!  :tada:
 
+#### Installing on your slack team.
+
+https://slack.com/oauth/authorize?scope=bot&client_id=<client id of your client>
+
+Replace the <client id of your client> with the client id of your new app, and paste this into your browser. Verify and give permissions to your app.
+
+If everything goes well, you will be redirected to a url like this:
+https://<yourtempsubdomain>.ngrok.io/thanks?code=XxxxXXxxX.xXxxxxxxx.xXXxxxx&state=
+
+Your flask server has already handled the necessary OAuth using this code.
+
+If you now go to your "Manage" tab (https://<yourteam>.slack.com/apps/manage), you should see your new app added to the list of apps. You can now start a DM with your new bot and see your server receiving the messages on /listening.
+
 ---
 **Next [More Info: README](./../README.md)**
 **Previous [Section 4: App Credentials](./../docs/Section-4.md)**
